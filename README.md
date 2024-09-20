@@ -5,9 +5,9 @@
 <p>
 
 <p align="center">
-        🤗 <a href="https://huggingface.co/Infinigence/Megrez-3B-Instruct">Hugging Face</a>&nbsp&nbsp | &nbsp&nbsp🤖 <a href="https://modelscope.cn/organization/qwen">ModelScope</a>&nbsp&nbsp | &nbsp&nbsp 📑 <a href="https://arxiv.org/abs/2407.10671">Paper</a> &nbsp&nbsp | &nbsp&nbsp 📑 <a href="https://github.com/infinigence/">Github</a> &nbsp&nbsp ｜ &nbsp&nbsp📖 <a href="https://qwen.readthedocs.io/">Documentation</a>
+        🤗 <a href="https://huggingface.co/Infinigence/Megrez-3B-Instruct">HuggingFace</a>&nbsp&nbsp | &nbsp&nbsp🤖 <a href="https://modelscope.cn/organization/Infinigence">ModelScope</a>&nbsp&nbsp
 <br>
-🖥️ <a href="http://39.107.190.207:8888">Demo</a>&nbsp&nbsp | &nbsp&nbsp💬 <a href="https://github.com/QwenLM/Qwen/blob/main/assets/wechat.png">WeChat (微信)</a>&nbsp&nbsp | &nbsp&nbsp🫨 <a href="https://discord.gg/CV4E9rpNSD">Discord</a>&nbsp&nbsp
+🖥️ <a href="http://39.107.190.207:8888">Demo</a>&nbsp&nbsp | &nbsp&nbsp💬 <a href="https://cloud.infini-ai.com/assets/png/wechat_community.7dbbc0b51726745659605.png">WeChat Groups</a>&nbsp&nbsp | &nbsp&nbsp🫨 <a href="https://cloud.infini-ai.com/assets/png/wechat_official_account.1f7e61401726745659605.png">WeChat Official</a>&nbsp&nbsp
 </p>
 
 
@@ -17,14 +17,14 @@
 - [Quick Start](#quick-start)
 - [Performance](#performance)
 - [Limitations](#limitations)
+- [License](#license)
 - [Citation](#citation)
 - [Contact](#contact)
 
 
 <a name="news-and-updates"></a>
 ## News and Updates
-
-- 2024.09.24: We released the Megrez-3B.
+- 2024.09.27: We released the Megrez-3B.
 
 
 <a name="quick-start"></a>
@@ -43,7 +43,6 @@ You can download our models through HuggingFace or ModelScope.
 | Model Name             | HF Link                                               | MS Link |
 | ---------------------- | ----------------------------------------------------- | ------- |
 | Megrez-3B-Instruct     | https://huggingface.co/Infinigence/Megrez-3B-Instruct | xxxxx   |
-| Megrez-3B-Instruct-AWQ | https://huggingface.co/Infinigence/Megrez-3B-Instruct | xxxxx   |
 
 ### Inference
 #### 🤗 HuggingFace Transformers
@@ -51,7 +50,7 @@ You can download our models through HuggingFace or ModelScope.
 import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
-model_path = "/mnt/public/algm/yzy/train_log/agent/functioncall/infini-megrez-3b-new-agent-final-v19"
+model_path = "Infinigence/Megrez-3B-Instruct"
 device = "cuda"
 tokenizer = AutoTokenizer.from_pretrained(model_path, trust_romote_code=True)
 model = AutoModelForCausalLM.from_pretrained(model_path, torch_dtype=torch.bfloat16, device_map=device, trust_remote_code=True)
@@ -73,19 +72,17 @@ responses = tokenizer.batch_decode(output_token_ids, skip_special_tokens=True)[0
 print(responses)
 ```
 
-For quantized models, we advise you to use the GPTQ and AWQ correspondents, namely `Megrez-3B-Instruct-GPTQ` and `Megrez-3B-Instruct-AWQ`. 
-
 #### 🤖 ModelScope
 ```python
 import torch
 from modelscope import AutoTokenizer, AutoModelForCausalLM
 
-model_path = "/mnt/public/algm/yzy/train_log/agent/functioncall/infini-megrez-3b-new-agent-final-v19"
+model_path = "Infinigence/Megrez-3B-Instruct"
 device = "cuda"
 tokenizer = AutoTokenizer.from_pretrained(model_path, trust_romote_code=True)
 model = AutoModelForCausalLM.from_pretrained(model_path, torch_dtype=torch.bfloat16, device_map=device, trust_remote_code=True)
 
-messages = [{"role": "user", "content": "如何制作黄焖鸡"}]
+messages = [{"role": "user", "content": "How to make braised chicken in brown sauce?"}]
 model_inputs = tokenizer.apply_chat_template(messages, return_tensors="pt", add_generation_prompt=True).to(device)
 model_outputs = model.generate(
     model_inputs,
@@ -115,7 +112,7 @@ llm = LLM(
     tensor_parallel_size=1
 )
 
-messages = [{"role": "user", "content": "如何制作黄焖鸡"}]
+messages = [{"role": "user", "content": "How to make braised chicken in brown sauce?"}]
 input_text = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
 sampling_params = SamplingParams(top_p=0.9, temperature=0.7, max_tokens=2048, repetition_penalty=1.02)
 outputs = llm.generate(prompts=input_text, sampling_params=sampling_params)
@@ -129,10 +126,8 @@ print(outputs[0].outputs[0].text)
 python -m vllm.entrypoints.openai.api_server --served-model-name Megrez-3B-Instruct --model /local/path/to/Megrez-3B-Instruct --port 8000 --tensor-parallel-size 1
 ```
 
-#### CPU
-
 ### Tool Use
-Megrez-3B-Instruct supports function-calling, especially optimized  for websearch agents. Please refer to our release [InfiniWebSearch](link) framework for a more detailed user guide.
+Megrez-3B-Instruct supports function-calling, especially optimized for web-search agents. Please refer to our release [InfiniWebSearch](https://github.com/infinigence/InfiniWebSearch) framework for a more detailed information.
 
 
 <a name="performance"></a>
@@ -150,10 +145,15 @@ We have evaluated Megrez-3B using the open-source evaluation tool [OpenCompass](
 
 <a name="limitations"></a>
 ## Limitations
-- **Hallucination**: LLMs inherently suffer from hallucination issues. Users are advised not to fully trust the content generated by the model. If more factually accurate outputs are desired, we recommend utilizing our WebSearch framework, as detailed in [xxxx].
+- **Hallucination**: LLMs inherently suffer from hallucination issues. Users are advised not to fully trust the content generated by the model. If more factually accurate outputs are desired, we recommend utilizing our WebSearch framework, as detailed in [InfiniWebSearch](https://github.com/infinigence/InfiniWebSearch).
 - **Mathematics & Reasoning**: SLMs tend to produce incorrect calculations or flawed reasoning chains in tasks involving mathematics and reasoning, leading to erroneous outputs. Notably, the softmax distribution of SLMs is less sharp compared to LLMs, making them more prone to inconsistent reasoning results, particularly under higher temperature settings. This is especially evident in deterministic tasks such as mathematics and logical reasoning. We recommend lowering the temperature or verifying through multiple inference attempts in such cases.
 - **System Prompt**: As with most LLMs, we recommend using the default system prompt from the `chat_template` in the configuration file for a stable and balanced performance. This model release has de-emphasized capabilities related to domain-specific applications such as role-playing. For users with specific domain needs, we suggest fine-tuning the model accordingly.
 - **Values & Safety**: Every effort has been made to ensure the compliance of the data used during the training of this model. However, given the large scale and complexity of the data, unforeseen issues may still arise. We do not assume any responsibility for any issues that may result from the use of this open-source model, including but not limited to data security concerns, risks related to public opinion, or any risks and problems arising from the misguidance, misuse, or dissemination of the model.
+
+
+<a name="license"></a>
+## License
+All our open-source models are licensed under Apache 2.0. You can find the license files in this repository and the respective Hugging Face repositories. 
 
 
 <a name="citation"></a>
