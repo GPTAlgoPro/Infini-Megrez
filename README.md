@@ -1,8 +1,9 @@
 # Infini-Megrez: Open Source LLM Family Developed By Infinigence-AI
 
 <p align="center">
-    <img src="https://cloud.infini-ai.com/assets/svg/logo_new.ceae5ff61726745659605.svg" width="400"/>
+    <img src="assets/megrez_logo.png" width="400"/>
 <p>
+
 
 <p align="center">
         🤗 <a href="https://huggingface.co/Infinigence/Megrez-3B-Instruct">HuggingFace</a>&nbsp&nbsp | &nbsp&nbsp🤖 <a href="https://modelscope.cn/organization/Infinigence">ModelScope</a>&nbsp&nbsp
@@ -141,6 +142,11 @@ We have evaluated Megrez-3B using the open-source evaluation tool [OpenCompass](
 ### Chat Ability 
 
 ### Other Ability
+
+#### On-device Inference
+<div align="center">
+    <img src="assets/deployment_android.gif" width="50%" alt="Example GIF">
+</div>
 
 
 <a name="limitations"></a>
