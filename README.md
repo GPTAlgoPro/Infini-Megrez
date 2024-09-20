@@ -55,7 +55,7 @@ device = "cuda"
 tokenizer = AutoTokenizer.from_pretrained(model_path, trust_romote_code=True)
 model = AutoModelForCausalLM.from_pretrained(model_path, torch_dtype=torch.bfloat16, device_map=device, trust_remote_code=True)
 
-messages = [{"role": "user", "content": "如何制作黄焖鸡"}]
+messages = [{"role": "user", "content": "How to make braised chicken in brown sauce?"}]
 model_inputs = tokenizer.apply_chat_template(messages, return_tensors="pt", add_generation_prompt=True).to(device)
 model_outputs = model.generate(
     model_inputs,
