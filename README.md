@@ -133,12 +133,12 @@ The inference speeds reported here were all obtained using [vllm](https://github
 
 
 ### Model Card
-|   Architecture   | Context length | # Total Params | # Non-Emb Params | Vocab Size | Training data | Supported languages |
-| :--------------: | :------------: | :------------: | :----------------------------------------: | :--------: | :-----------: | :-----------------: |
-| Llama-2 with GQA |   4K tokens    |     2.92B      |                   2.29B                    |   122880   |   2T tokens   |  Chinese & English  |
+| Model Name |    Architecture   | Context length | # Total Params | # Non-Emb Params | Vocab Size | Training data | Supported languages |
+|:------:|:--------------: | :------------: | :------------: | :----------------------------------------: | :--------: | :-----------: | :-----------------: |
+| Megrez-3B-Instruct | Llama-2 with GQA |   4K tokens    |     2.92B      |                   2.29B                    |   122880   |   2T tokens   |  Chinese & English  |
 
 ### General Benchmark
-|        Models         | Chat Model | # Non-Emb Params (B) | Inference Speed (tokens/s) | C-EVAL | CMMLU | MMLU  | MMLU-Pro | HumanEval | MBPP  | GSM8K | MATH  |
+|        Model Name         | Chat Model | # Non-Emb Params (B) | Inference Speed (tokens/s) | C-EVAL | CMMLU | MMLU  | MMLU-Pro | HumanEval | MBPP  | GSM8K | MATH  |
 | :-------------------: | :---------------: | :------------: | :------------------------: | :----: | :---: | :---: | :------: | :-------: | :---: | :---: | :---: |
 |  Megrez-3B-Instruct   |         ✔         |      2.3       |          2329.38           |  81.4  | 74.5  | 70.6  |   48.2   |   62.2    | 77.4  | 64.8  | 26.5  |
 |      Qwen2-1.5B       |                   |      1.3       |          3299.53           |  70.6  | 70.3  | 56.5  |   21.8   |   31.1    | 37.4  | 58.5  | 21.7  |
@@ -159,7 +159,7 @@ The inference speeds reported here were all obtained using [vllm](https://github
 |      Qwen1.5-14B      |                   |      12.6      |           735.61           |  78.7  | 77.6  | 67.6  |    -     |   37.8    | 44.0  | 70.1  | 29.2  |
 
 ### Chat Benchmark 
-|       Models        | # Non-Emb Params (B) | Inference Speed (tokens/s) | MT-Bench | AlignBench (ZH) |
+|       Model Name        | # Non-Emb Params (B) | Inference Speed (tokens/s) | MT-Bench | AlignBench (ZH) |
 | :-----------------: | :------------: | :------------------------: | :------: | :-------------: |
 | Megrez-3B-Instruct  |      2.3       |          2329.38           |   8.76   |      6.91       |
 | MiniCPM-2B-sft-bf16 |      2.4       |          1930.79           |    -     |      4.64       |
@@ -174,7 +174,7 @@ The inference speeds reported here were all obtained using [vllm](https://github
 | Baichuan2-13B-Chat  |      12.6      |           756.71           |    -     |      5.25       |
 
 ### LLM Leaderboard
-|         Models         | # Non-Emb Params (B) | Inference Speed (tokens/s) | IFEval |  BBH  | ARC_C | HellaSwag | WinoGrande | TriviaQA |
+|         Model Name         | # Non-Emb Params (B) | Inference Speed (tokens/s) | IFEval |  BBH  | ARC_C | HellaSwag | WinoGrande | TriviaQA |
 | :--------------------: | :------------: | :------------------------: | :----: | :---: | :---: | :-------: | :--------: | :------: |
 |   Megrez-3B-Instruct   |      2.3       |          2329.38           |  78.4  | 61.0  | 90.9  |   83.6    |    72.7    |   82.5   |
 |       MiniCPM-2B       |      2.4       |          1930.79           |   -    | 36.9  | 68.0  |   68.3    |     -      |   32.5   |
