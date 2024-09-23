@@ -5,7 +5,7 @@
 <p>
 
 <p align="center">
-        🤗 <a href="https://huggingface.co/Infinigence/Megrez-3B-Instruct">HuggingFace</a>&nbsp&nbsp | &nbsp&nbsp🤖 <a href="https://modelscope.cn/organization/Infinigence">ModelScope</a>&nbsp&nbsp | &nbsp&nbsp🧙 <a href="https://modelers.cn/models/INFINIGENCE-AI/Megrez-3B-Instruct">Modelers</a>&nbsp&nbsp | &nbsp&nbsp🖥️ <a href="https://huggingface.co/spaces/Infinigence/Infinigence-AI-Chat-Demo">Demo</a>&nbsp&nbsp | &nbsp&nbsp🏠 <a href="https://cloud.infini-ai.com/genstudio/model/mo-c73owqiotql7lozr">Infini-AI mass</a>&nbsp&nbsp | &nbsp&nbsp📖 <a href="https://cloud.infini-ai.com/assets/png/wechat_official_account.1f7e61401727063822266.png">WeChat Official</a>&nbsp&nbsp | &nbsp&nbsp💬 <a href="https://cloud.infini-ai.com/assets/png/wechat_community.7dbbc0b51727063822266.png">WeChat Groups</a>&nbsp&nbsp   
+        🤗 <a href="https://huggingface.co/Infinigence/Megrez-3B-Instruct">HuggingFace</a>&nbsp&nbsp | &nbsp&nbsp🤖 <a href="https://www.modelscope.cn/models/InfiniAI/Megrez-3b-Instruct">ModelScope</a>&nbsp&nbsp | &nbsp&nbsp🧙 <a href="https://modelers.cn/models/INFINIGENCE-AI/Megrez-3B-Instruct">Modelers</a>&nbsp&nbsp | &nbsp&nbsp🖥️ <a href="https://huggingface.co/spaces/Infinigence/Infinigence-AI-Chat-Demo">Demo</a>&nbsp&nbsp | &nbsp&nbsp🏠 <a href="https://cloud.infini-ai.com/genstudio/model/mo-c73owqiotql7lozr">Infini-AI mass</a>&nbsp&nbsp | &nbsp&nbsp📖 <a href="https://cloud.infini-ai.com/assets/png/wechat_official_account.1f7e61401727063822266.png">WeChat Official</a>&nbsp&nbsp | &nbsp&nbsp💬 <a href="https://cloud.infini-ai.com/assets/png/wechat_community.7dbbc0b51727063822266.png">WeChat Groups</a>&nbsp&nbsp   
 </p>
 
 ## Introduction
@@ -37,7 +37,7 @@ vllm==0.6.1.post2
 You can download our models through HuggingFace or ModelScope.
 | Model Name             | HF Link                                               | MS Link |
 | ---------------------- | ----------------------------------------------------- | ------- |
-| Megrez-3B-Instruct     | https://huggingface.co/Infinigence/Megrez-3B-Instruct | coming soon   |
+| Megrez-3B-Instruct     | https://huggingface.co/Infinigence/Megrez-3B-Instruct | https://www.modelscope.cn/models/InfiniAI/Megrez-3b-Instruct   |
 
 ### Inference
 #### 🤗 HuggingFace Transformers
