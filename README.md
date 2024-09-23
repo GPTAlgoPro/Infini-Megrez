@@ -35,7 +35,7 @@ vllm==0.6.1.post2
 You can download our models through HuggingFace or ModelScope.
 | Model Name             | HF Link                                               | MS Link |
 | ---------------------- | ----------------------------------------------------- | ------- |
-| Megrez-3B-Instruct     | https://huggingface.co/Infinigence/Megrez-3B-Instruct | xxxxx   |
+| Megrez-3B-Instruct     | https://huggingface.co/Infinigence/Megrez-3B-Instruct | coming soon   |
 
 ### Inference
 #### 🤗 HuggingFace Transformers
