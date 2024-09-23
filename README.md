@@ -133,7 +133,8 @@ python benchmark_throughput.py --model /local/path/to/Qwen-7B-Chat/ --input-len 
 
 <a name="performance"></a>
 ## Performance
-We have evaluated Megrez-3B using the open-source evaluation tool [OpenCompass](https://github.com/open-compass/opencompass) on several important benchmarks. Some of the evaluation results are shown in the table below. For more evaluation results, please visit the [OpenCompass leaderboard](https://rank.opencompass.org.cn/).
+We have evaluated Megrez-3B-Instruct using the open-source evaluation tool [OpenCompass](https://github.com/open-compass/opencompass) on several important benchmarks. Some of the evaluation results are shown in the table below. For more evaluation results, please visit the [OpenCompass leaderboard](https://rank.opencompass.org.cn/).
+The inference speeds reported here were all obtained using [vllm](GitHub - vllm-project/vllm: A high-throughput and memory-efficient inference and serving engine for). The experimental configuration is `batch_size=8`, `prefill_tokens=128` and `decode_tokens=128`.
 
 
 ### Model Card
