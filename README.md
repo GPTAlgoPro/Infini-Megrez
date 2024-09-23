@@ -5,7 +5,7 @@
 <p>
 
 <p align="center">
-        🤗 <a href="https://huggingface.co/Infinigence/Megrez-3B-Instruct">HuggingFace</a>&nbsp&nbsp | &nbsp&nbsp🤖 <a href="https://modelscope.cn/organization/Infinigence">ModelScope</a>&nbsp&nbsp | &nbsp&nbsp🖥️ <a href="https://huggingface.co/spaces/Infinigence/Infinigence-AI-Chat-Demo">Demo</a>&nbsp&nbsp | &nbsp&nbsp💬 <a href="https://cloud.infini-ai.com/assets/png/wechat_community.7dbbc0b51726745659605.png">WeChat Groups</a>&nbsp&nbsp | &nbsp&nbsp📖 <a href="https://cloud.infini-ai.com/assets/png/wechat_official_account.1f7e61401726745659605.png">WeChat Official</a>&nbsp&nbsp
+        🤗 <a href="https://huggingface.co/Infinigence/Megrez-3B-Instruct">HuggingFace</a>&nbsp&nbsp | &nbsp&nbsp🤖 <a href="https://modelscope.cn/organization/Infinigence">ModelScope</a>&nbsp&nbsp | &nbsp&nbsp🧙 <a href="https://modelers.cn/models/INFINIGENCE-AI/Megrez-3B-Instruct">Modelers</a>&nbsp&nbsp | &nbsp&nbsp🖥️ <a href="https://huggingface.co/spaces/Infinigence/Infinigence-AI-Chat-Demo">Demo</a>&nbsp&nbsp | &nbsp&nbsp🏠 <a href="https://cloud.infini-ai.com/genstudio/model/mo-c73owqiotql7lozr">Infini-AI mass</a>&nbsp&nbsp | &nbsp&nbsp📖 <a href="https://cloud.infini-ai.com/assets/png/wechat_official_account.1f7e61401726745659605.png">WeChat Official</a>&nbsp&nbsp | &nbsp&nbsp💬 <a href="https://cloud.infini-ai.com/assets/png/wechat_community.7dbbc0b51726745659605.png">WeChat Groups</a>&nbsp&nbsp   
 </p>
 
 ## Introduction
@@ -19,7 +19,7 @@ Megrez-3B-Instruct is a large language model independently trained by Infinigenc
 
 <a name="news-and-updates"></a>
 ## News and Updates
-- 2024.09.27: We released the Megrez-3B.
+- 2024.09.24: We released the Megrez-3B-Instruct.
 
 
 <a name="quick-start"></a>
