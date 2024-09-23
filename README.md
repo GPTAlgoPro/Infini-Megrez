@@ -198,7 +198,7 @@ MLCChat is a on-device chat app, coming soon.
 <details><summary><b>Web-Search Agent</b></summary>
 InfiniWebSearch is our open-sourced web-search agent. Please refer to https://github.com/infinigence/InfiniWebSearch.
 <div align="center">
-    <img src="assets/websearch_demo.gif" width="50%" alt="Example GIF">
+    <img src="assets/websearch_demo.gif" width="100%" alt="Example GIF">
 </div>
 
 </details>
