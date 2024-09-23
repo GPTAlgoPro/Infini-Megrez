@@ -134,62 +134,63 @@ python benchmark_throughput.py --model /local/path/to/Qwen-7B-Chat/ --input-len 
 <a name="performance"></a>
 ## Performance
 We have evaluated Megrez-3B-Instruct using the open-source evaluation tool [OpenCompass](https://github.com/open-compass/opencompass) on several important benchmarks. Some of the evaluation results are shown in the table below. For more evaluation results, please visit the [OpenCompass leaderboard](https://rank.opencompass.org.cn/).
-The inference speeds reported here were all obtained using [vllm](GitHub - vllm-project/vllm: A high-throughput and memory-efficient inference and serving engine for). The experimental configuration is `batch_size=8`, `prefill_tokens=128` and `decode_tokens=128`.
+
+The inference speeds reported here were all obtained using [vllm](https://github.com/vllm-project/vllm). The experimental configuration is `batch_size=8`, `prefill_tokens=128` and `decode_tokens=128`.
 
 
 ### Model Card
-| Name | Architecture | Context Length | # Total Params | # Non-Emb Params | Training Data | Supported Languages |
- |:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:| 
- | Megrez-3B-Instruct | Llama-2 with GQA | 4K | 2.92B | 2.29B | 2T tokens | Chinese & English |
+|   Architecture   | Context length | Params (Total) | Params (Backbone only, w/o Emb or Softmax) | Vocab Size | Training data | Supported languages |
+| :--------------: | :------------: | :------------: | :----------------------------------------: | :--------: | :-----------: | :-----------------: |
+| Llama-2 with GQA |   4K tokens    |     2.92B      |                   2.29B                    |   122880   |   2T tokens   |  Chinese & English  |
 
 ### General Ability
-| Models | Instruction-tuned | Release Date | # Non-Emb Params (B) | Inference Speed (tokens/s) | C-EVAL | CMMLU | MMLU | MMLU-Pro | HumanEval | MBPP | GSM8K | MATH |
- |:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:| 
- | Megrez-3B-Instruct | Y | 2024.09.24 | 2.3 | 2329.38 | 81.4 | 74.5 | 70.6 | 48.2 | 62.2 | 77.4 | 64.8 | 26.5 | 
- | Qwen2-1.5B | | 2024.06.06 | 1.3 | 3299.53 | 70.6 | 70.3 | 56.5 | 21.8 | 31.1 | 37.4 | 58.5 | 21.7 | 
- | Qwen2.5-1.5B | | 2024.09.19 | 1.3 | 3318.81 | - | - | 60.9 | 28.5 | 37.2 | 60.2 | 68.5 | 35.0 | 
- | MiniCPM-2B | | 2024.04.11 | 2.4 | 1930.79 | 51.1 | 51.1 | 53.5 | - | 50.0 | 47.3 | 53.8 | 10.2 | 
- | Qwen2.5-3B | | 2024.09.19 | 2.8 | 2248.33 | - | - | 65.6 | 34.6 | 42.1 | 57.1 | 79.1 | 42.6 | 
- | Qwen2.5-3B-Instruct | Y | 2024.09.19 | 2.8 | 2248.33 | - | - | - | 43.7 | 74.4 | 72.7 | 86.7 | 65.9 | 
- | Qwen1.5-4B | | 2024.02.04 | 3.2 | 1837.91 | 67.6 | 66.7 | 56.1 | - | 25.6 | 29.2 | 57.0 | 10.0 |
-  | Phi-3.5-mini-instruct | Y | 2024.08.23 | 3.6 | 1559.09 | 46.1 | 46.9 | 69.0 | - | 62.8 | 69.6 | 86.2 | 48.5 | 
-  | MiniCPM3-4B | Y | 2024.09.05 | 3.9 | 901.05 | 73.6 | 73.3 | 67.2 | - | 74.4 | 72.5 | 81.1 | 46.6 | 
-  | Yi-1.5-6B | | 2024.05.11 | 5.5 | 1542.66 | - | 70.8 | 63.5 | - | 36.5 | 56.8 | 62.2 | 28.4 | 
-  | Qwen1.5-7B | | 2024.02.04 | 6.5 | 1282.27 | 74.1 | 73.1 | 61.0 | 29.9 | 36.0 | 51.6 | 62.5 | 20.3 |
-  | Qwen2-7B | | 2024.06.07 | 6.5 | 1279.37 | 83.2 | 83.9 | 70.3 | 40.0 | 51.2 | 65.9 | 79.9 | 44.2 | 
-  | Qwen2.5-7B | | 2024.09.19 | 6.5 | 1283.37 | - | - | 74.2 | 45.0 | 57.9 | 74.9 | 85.4 | 49.8 |
-   | Meta-Llama-3.1-8B | | 2024.07.23 | 7.0 | 1255.91 | - | - | 66.7 | 37.1 | - | - | - | - | 
-   | GLM-4-9B-chat | Y | 2024.06.04 | 8.2 | 1076.13 | 75.6 | 71.5 | 72.4 | - | 71.8 | - | 79.6 | 50.6 |
-   | Baichuan2-13B-Base | | 2023.09.06 | 12.6 | 756.71 | 58.1 | 62.0 | 59.2 | - | 17.1 | 30.2 | 52.8 | 10.1 |
-   | Qwen1.5-14B | | 2024.02.04 | 12.6 | 735.61 | 78.7 | 77.6 | 67.6 | - | 37.8 | 44.0 | 70.1 | 29.2 |
+|        Models         | Instruction-tuned | Non-Emb Params | Inference Speed (tokens/s) | C-EVAL | CMMLU | MMLU  | MMLU-Pro | HumanEval | MBPP  | GSM8K | MATH  |
+| :-------------------: | :---------------: | :------------: | :------------------------: | :----: | :---: | :---: | :------: | :-------: | :---: | :---: | :---: |
+|  Megrez-3B-Instruct   |         Y         |      2.3       |          2329.38           |  81.4  | 74.5  | 70.6  |   48.2   |   62.2    | 77.4  | 64.8  | 26.5  |
+|      Qwen2-1.5B       |                   |      1.3       |          3299.53           |  70.6  | 70.3  | 56.5  |   21.8   |   31.1    | 37.4  | 58.5  | 21.7  |
+|     Qwen2.5-1.5B      |                   |      1.3       |          3318.81           |   -    |   -   | 60.9  |   28.5   |   37.2    | 60.2  | 68.5  | 35.0  |
+|      MiniCPM-2B       |                   |      2.4       |          1930.79           |  51.1  | 51.1  | 53.5  |    -     |   50.0    | 47.3  | 53.8  | 10.2  |
+|      Qwen2.5-3B       |                   |      2.8       |          2248.33           |   -    |   -   | 65.6  |   34.6   |   42.1    | 57.1  | 79.1  | 42.6  |
+|  Qwen2.5-3B-Instruct  |         Y         |      2.8       |          2248.33           |   -    |   -   |   -   |   43.7   |   74.4    | 72.7  | 86.7  | 65.9  |
+|      Qwen1.5-4B       |                   |      3.2       |          1837.91           |  67.6  | 66.7  | 56.1  |    -     |   25.6    | 29.2  | 57.0  | 10.0  |
+| Phi-3.5-mini-instruct |         Y         |      3.6       |          1559.09           |  46.1  | 46.9  | 69.0  |    -     |   62.8    | 69.6  | 86.2  | 48.5  |
+|      MiniCPM3-4B      |         Y         |      3.9       |           901.05           |  73.6  | 73.3  | 67.2  |    -     |   74.4    | 72.5  | 81.1  | 46.6  |
+|       Yi-1.5-6B       |                   |      5.5       |          1542.66           |   -    | 70.8  | 63.5  |    -     |   36.5    | 56.8  | 62.2  | 28.4  |
+|      Qwen1.5-7B       |                   |      6.5       |          1282.27           |  74.1  | 73.1  | 61.0  |   29.9   |   36.0    | 51.6  | 62.5  | 20.3  |
+|       Qwen2-7B        |                   |      6.5       |          1279.37           |  83.2  | 83.9  | 70.3  |   40.0   |   51.2    | 65.9  | 79.9  | 44.2  |
+|      Qwen2.5-7B       |                   |      6.5       |          1283.37           |   -    |   -   | 74.2  |   45.0   |   57.9    | 74.9  | 85.4  | 49.8  |
+|   Meta-Llama-3.1-8B   |                   |      7.0       |          1255.91           |   -    |   -   | 66.7  |   37.1   |     -     |   -   |   -   |   -   |
+|     GLM-4-9B-chat     |         Y         |      8.2       |          1076.13           |  75.6  | 71.5  | 72.4  |    -     |   71.8    |   -   | 79.6  | 50.6  |
+|  Baichuan2-13B-Base   |                   |      12.6      |           756.71           |  58.1  | 62.0  | 59.2  |    -     |   17.1    | 30.2  | 52.8  | 10.1  |
+|      Qwen1.5-14B      |                   |      12.6      |           735.61           |  78.7  | 77.6  | 67.6  |    -     |   37.8    | 44.0  | 70.1  | 29.2  |
 
-### Instruction Performance 
-| Models              | Release Date | # Non-Emb Params (B) | Inference Speed (tokens/s) | MT-Bench | AlignBench |
-|:-------------------:|:------------:|:--------------------:|:--------------------------:|:--------:|:----------:|
-| Megrez-3B-Instruct  |  2024.09.24  |         2.3          |           2329.4           |   8.76   |    6.91    |
-| MiniCPM-2B-sft-bf16 |  2024.04.11  |         2.4          |           1930.8           |     -    |    4.64    |
-| MiniCPM-2B-dpo-bf16 |  2024.04.11  |         2.4          |           1930.8           |   7.25   |      -     |
-| Qwen2.5-3B-Instruct |  2024.09.19  |         2.8          |           2248.3           |     -    |      -     |
-| MiniCPM3-4B         |  2024.09.05  |         3.9          |           901.1            |   8.41   |    6.74    |
-| Yi-1.5-6B-Chat      |  2024.05.11  |         5.5          |           1542.7           |   7.50   |    6.20    |
-| Qwen1.5-7B-Chat     |  2024.02.04  |         6.5          |           1282.3           |   7.60   |    6.20    |
-| Qwen2-7b-Instruct   |  2024.06.07  |         6.5          |           1279.4           |   8.41   |    7.21    |
-| Qwen2.5-7B-Instruct |  2024.09.19  |         6.5          |           1283.4           |   8.75   |      -     |
-| glm-4-9b-chat       |  2024.06.04  |         8.2          |           1076.1           |   8.35   |    7.01    |
-| Baichuan2-13B-Chat  |  2023.09.06  |         12.6         |           756.7            |     -    |    5.25    |
+### Chat Ability 
+|       Models        | Non-Emb Params | Inference Speed (tokens/s) | MT-Bench | AlignBench (ZH) |
+| :-----------------: | :------------: | :------------------------: | :------: | :-------------: |
+| Megrez-3B-Instruct  |      2.3       |          2329.38           |   8.76   |      6.91       |
+| MiniCPM-2B-sft-bf16 |      2.4       |          1930.79           |    -     |      4.64       |
+| MiniCPM-2B-dpo-bf16 |      2.4       |          1930.79           |   7.25   |        -        |
+| Qwen2.5-3B-Instruct |      2.8       |          2248.33           |    -     |        -        |
+|     MiniCPM3-4B     |      3.9       |           901.05           |   8.41   |      6.74       |
+|   Yi-1.5-6B-Chat    |      5.5       |          1542.66           |   7.5    |       6.2       |
+|   Qwen1.5-7B-Chat   |      6.5       |          1282.27           |   7.6    |       6.2       |
+|    Qwen2-7B-Chat    |      6.5       |          1279.37           |   8.41   |      7.21       |
+| Qwen2.5-7B-Instruct |      6.5       |          1283.37           |   8.75   |        -        |
+|    GLM4-9B-Chat     |      8.2       |          1076.13           |   8.35   |      7.01       |
+| Baichuan2-13B-Chat  |      12.6      |           756.71           |    -     |      5.25       |
 
 ### Other Performance
 #### LLM Leaderboard
-| Models                | Release Date | # Non-Emb Params (B) | Inference Speed (tokens/s) | IFeval Strict-Prompt |  BBH | ARC_C | HellaSwag | WinoGrande | TriviaQA |
-|:---------------------:|:------------:|:--------------------:|:--------------------------:|:--------------------:|:----:|:-----:|:---------:|:----------:|:--------:|
-| Megrez-3B-Instruct    |  2024.09.24  |         2.3          |           2329.4           |         74.7         | 61.0 |  90.9 |    83.6   |    72.7    |   82.5   |
-| MiniCPM-2B            |  2024.04.11  |         2.4          |           1930.8           |           -          | 36.9 |  68.0 |    68.3   |      -     |   32.5   |
-| Qwen2.5-3B            |  2024.09.19  |         2.8          |           2248.3           |           -          | 56.3 |  56.5 |    74.6   |    71.1    |     -    |
-| Qwen2.5-3B-Instruct   |  2024.09.19  |         2.8          |           2248.3           |         58.2         |   -  |   -   |     -     |      -     |     -    |
-| Phi-3.5-mini-instruct |  2024.08.23  |         3.6          |           1559.1           |           -          | 69.0 |  84.6 |    69.4   |    68.5    |     -    |
-| MiniCPM3-4B           |  2024.09.05  |         3.9          |           901.1            |         68.4         | 70.2 |   -   |     -     |      -     |     -    |
-| Qwen2-7B-Instruct     |  2024.06.07  |         6.5          |           1279.4           |           -          | 62.6 |  60.6 |    80.7   |    77.0    |     -    |
-| Meta-Llama-3.1-8B     |   2024.07.23 |         7.0          |           1255.9           |         71.5         | 28.9 |  83.4 |     -     |      -     |     -    |
+|         Models         | Non-Emb Params | Inference Speed (tokens/s) | IFEval |  BBH  | ARC_C | HellaSwag | WinoGrande | TriviaQA |
+| :--------------------: | :------------: | :------------------------: | :----: | :---: | :---: | :-------: | :--------: | :------: |
+|   Megrez-3B-Instruct   |      2.3       |          2329.38           |  78.4  | 61.0  | 90.9  |   83.6    |    72.7    |   82.5   |
+|       MiniCPM-2B       |      2.4       |          1930.79           |   -    | 36.9  | 68.0  |   68.3    |     -      |   32.5   |
+|       Qwen2.5-3B       |      2.8       |          2248.33           |   -    | 56.3  | 56.5  |   74.6    |    71.1    |    -     |
+|  Qwen2.5-3B-instruct   |      2.8       |          2248.33           |  58.2  |   -   |   -   |     -     |     -      |    -     |
+| Phi-3.5-mini-instruct  |      3.6       |          1559.09           |   -    | 69.0  | 84.6  |   69.4    |    68.5    |    -     |
+|      MiniCPM3-4B       |      3.9       |           901.05           |  68.4  | 70.2  |   -   |     -     |     -      |    -     |
+|     Qwen2-7B-Chat      |      6.5       |          1279.37           |   -    | 62.6  | 60.6  |   80.7    |    77.0    |    -     |
+| Meta-Llama-3.1-8B-inst |      7.0       |          1255.91           |  71.5  | 28.9  | 83.4  |     -     |     -      |    -     |
 <details><summary><b>On-device Inference</b></summary>
     
 <div align="center">
