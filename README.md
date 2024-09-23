@@ -5,7 +5,7 @@
 <p>
 
 <p align="center">
-        🤗 <a href="https://huggingface.co/Infinigence/Megrez-3B-Instruct">HuggingFace</a>&nbsp&nbsp | &nbsp&nbsp🤖 <a href="https://www.modelscope.cn/models/InfiniAI/Megrez-3b-Instruct">ModelScope</a>&nbsp&nbsp | &nbsp&nbsp🧙 <a href="https://modelers.cn/models/INFINIGENCE-AI/Megrez-3B-Instruct">Modelers</a>&nbsp&nbsp | &nbsp&nbsp🖥️ <a href="https://huggingface.co/spaces/Infinigence/Infinigence-AI-Chat-Demo">Demo</a>&nbsp&nbsp | &nbsp&nbsp🏠 <a href="https://cloud.infini-ai.com/genstudio/model/mo-c73owqiotql7lozr">Infini-AI mass</a>&nbsp&nbsp | &nbsp&nbsp📖 <a href="https://cloud.infini-ai.com/assets/png/wechat_official_account.1f7e61401727063822266.png">WeChat Official</a>&nbsp&nbsp | &nbsp&nbsp💬 <a href="https://cloud.infini-ai.com/assets/png/wechat_community.7dbbc0b51727063822266.png">WeChat Groups</a>&nbsp&nbsp   
+        🤗 <a href="https://huggingface.co/Infinigence/Megrez-3B-Instruct">HuggingFace</a>&nbsp&nbsp | &nbsp&nbsp🤖 <a href="https://www.modelscope.cn/models/InfiniAI/Megrez-3b-Instruct">ModelScope</a>&nbsp&nbsp | &nbsp&nbsp🧙 <a href="https://modelers.cn/models/INFINIGENCE-AI/Megrez-3B-Instruct">Modelers</a>&nbsp&nbsp <br> &nbsp&nbsp🏠 <a href="https://cloud.infini-ai.com/genstudio/model/mo-c73owqiotql7lozr">Infini-AI mass</a>&nbsp&nbsp | &nbsp&nbsp🖥️ <a href="https://huggingface.co/spaces/Infinigence/Infinigence-AI-Chat-Demo">HF Demo</a>&nbsp&nbsp |  &nbsp&nbsp📖 <a href="https://cloud.infini-ai.com/assets/png/wechat_official_account.1f7e61401727063822266.png">WeChat Official</a>&nbsp&nbsp | &nbsp&nbsp💬 <a href="https://cloud.infini-ai.com/assets/png/wechat_community.7dbbc0b51727063822266.png">WeChat Groups</a>&nbsp&nbsp   
 </p>
 
 ## Introduction
@@ -32,12 +32,6 @@ transformers==4.44.2
 accelerate==0.34.2
 vllm==0.6.1.post2
 ```
-
-### Download Models
-You can download our models through HuggingFace or ModelScope.
-| Model Name             | HF Link                                               | MS Link |
-| ---------------------- | ----------------------------------------------------- | ------- |
-| Megrez-3B-Instruct     | https://huggingface.co/Infinigence/Megrez-3B-Instruct | https://www.modelscope.cn/models/InfiniAI/Megrez-3b-Instruct   |
 
 ### Inference
 #### 🤗 HuggingFace Transformers
@@ -139,12 +133,12 @@ The inference speeds reported here were all obtained using [vllm](https://github
 
 
 ### Model Card
-|   Architecture   | Context length | Params (Total) | Params (Backbone only, w/o Emb or Softmax) | Vocab Size | Training data | Supported languages |
+|   Architecture   | Context length | # Params (Total) | # Non-Emb Params | Vocab Size | Training data | Supported languages |
 | :--------------: | :------------: | :------------: | :----------------------------------------: | :--------: | :-----------: | :-----------------: |
 | Llama-2 with GQA |   4K tokens    |     2.92B      |                   2.29B                    |   122880   |   2T tokens   |  Chinese & English  |
 
-### General Ability
-|        Models         | Instruction-tuned | Non-Emb Params | Inference Speed (tokens/s) | C-EVAL | CMMLU | MMLU  | MMLU-Pro | HumanEval | MBPP  | GSM8K | MATH  |
+### General Benchmark
+|        Models         | Instruction-tuned | # Non-Emb Params (B) | Inference Speed (tokens/s) | C-EVAL | CMMLU | MMLU  | MMLU-Pro | HumanEval | MBPP  | GSM8K | MATH  |
 | :-------------------: | :---------------: | :------------: | :------------------------: | :----: | :---: | :---: | :------: | :-------: | :---: | :---: | :---: |
 |  Megrez-3B-Instruct   |         Y         |      2.3       |          2329.38           |  81.4  | 74.5  | 70.6  |   48.2   |   62.2    | 77.4  | 64.8  | 26.5  |
 |      Qwen2-1.5B       |                   |      1.3       |          3299.53           |  70.6  | 70.3  | 56.5  |   21.8   |   31.1    | 37.4  | 58.5  | 21.7  |
@@ -164,8 +158,8 @@ The inference speeds reported here were all obtained using [vllm](https://github
 |  Baichuan2-13B-Base   |                   |      12.6      |           756.71           |  58.1  | 62.0  | 59.2  |    -     |   17.1    | 30.2  | 52.8  | 10.1  |
 |      Qwen1.5-14B      |                   |      12.6      |           735.61           |  78.7  | 77.6  | 67.6  |    -     |   37.8    | 44.0  | 70.1  | 29.2  |
 
-### Chat Ability 
-|       Models        | Non-Emb Params | Inference Speed (tokens/s) | MT-Bench | AlignBench (ZH) |
+### Chat Benchmark 
+|       Models        | # Non-Emb Params (B) | Inference Speed (tokens/s) | MT-Bench | AlignBench (ZH) |
 | :-----------------: | :------------: | :------------------------: | :------: | :-------------: |
 | Megrez-3B-Instruct  |      2.3       |          2329.38           |   8.76   |      6.91       |
 | MiniCPM-2B-sft-bf16 |      2.4       |          1930.79           |    -     |      4.64       |
@@ -179,9 +173,8 @@ The inference speeds reported here were all obtained using [vllm](https://github
 |    GLM4-9B-Chat     |      8.2       |          1076.13           |   8.35   |      7.01       |
 | Baichuan2-13B-Chat  |      12.6      |           756.71           |    -     |      5.25       |
 
-### Other Performance
-#### LLM Leaderboard
-|         Models         | Non-Emb Params | Inference Speed (tokens/s) | IFEval |  BBH  | ARC_C | HellaSwag | WinoGrande | TriviaQA |
+### LLM Leaderboard
+|         Models         | # Non-Emb Params (B) | Inference Speed (tokens/s) | IFEval |  BBH  | ARC_C | HellaSwag | WinoGrande | TriviaQA |
 | :--------------------: | :------------: | :------------------------: | :----: | :---: | :---: | :-------: | :--------: | :------: |
 |   Megrez-3B-Instruct   |      2.3       |          2329.38           |  78.4  | 61.0  | 90.9  |   83.6    |    72.7    |   82.5   |
 |       MiniCPM-2B       |      2.4       |          1930.79           |   -    | 36.9  | 68.0  |   68.3    |     -      |   32.5   |
@@ -191,14 +184,24 @@ The inference speeds reported here were all obtained using [vllm](https://github
 |      MiniCPM3-4B       |      3.9       |           901.05           |  68.4  | 70.2  |   -   |     -     |     -      |    -     |
 |     Qwen2-7B-Chat      |      6.5       |          1279.37           |   -    | 62.6  | 60.6  |   80.7    |    77.0    |    -     |
 | Meta-Llama-3.1-8B-inst |      7.0       |          1255.91           |  71.5  | 28.9  | 83.4  |     -     |     -      |    -     |
+
+
+## Application
 <details><summary><b>On-device Inference</b></summary>
-    
+MLCChat is a on-device chat app, coming soon.
 <div align="center">
     <img src="assets/deployment_android.gif" width="50%" alt="Example GIF">
 </div>
 
 </details>
 
+<details><summary><b>Web-Search Agent</b></summary>
+InfiniWebSearch is our open-sourced web-search agent. Please refer to https://github.com/infinigence/InfiniWebSearch.
+<div align="center">
+    <img src="assets/websearch_demo.gif" width="50%" alt="Example GIF">
+</div>
+
+</details>
 
 
 <a name="limitations"></a>
@@ -212,20 +215,6 @@ The inference speeds reported here were all obtained using [vllm](https://github
 <a name="license"></a>
 ## License
 All our open-source models are licensed under Apache 2.0. You can find the license files in this repository and the respective Hugging Face repositories. 
-
-
-<a name="citation"></a>
-## Citation
-```
-@misc{yuan2024lveval,
-      title={LV-Eval: A Balanced Long-Context Benchmark with 5 Length Levels Up to 256K}, 
-      author={Tao Yuan and Xuefei Ning and Dong Zhou and Zhijie Yang and Shiyao Li and Minghui Zhuang and Zheyue Tan and Zhuyu Yao and Dahua Lin and Boxun Li and Guohao Dai and Shengen Yan and Yu Wang},
-      year={2024},
-      eprint={2402.05136},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL}
-}
-```
 
 
 <a name="contact"></a>
