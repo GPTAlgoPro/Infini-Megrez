@@ -3,19 +3,16 @@
 <p align="center">
         🤗 <a href="https://huggingface.co/Infinigence/Megrez-3B-Instruct">HuggingFace</a>&nbsp&nbsp | &nbsp&nbsp🤖 <a href="https://modelscope.cn/organization/Infinigence">ModelScope</a>&nbsp&nbsp
 <br>
-🖥️ <a href="http://39.107.190.207:8888">Demo</a>&nbsp&nbsp | &nbsp&nbsp💬 <a href="https://cloud.infini-ai.com/assets/png/wechat_community.7dbbc0b51726745659605.png">WeChat Groups</a>&nbsp&nbsp | &nbsp&nbsp🫨 <a href="https://cloud.infini-ai.com/assets/png/wechat_official_account.1f7e61401726745659605.png">WeChat Official</a>&nbsp&nbsp
+🖥️ <a href="http://39.107.190.207:8888">Demo</a>&nbsp&nbsp | &nbsp&nbsp💬 <a href="https://cloud.infini-ai.com/assets/png/wechat_community.7dbbc0b51726745659605.png">WeChat Groups</a>&nbsp&nbsp | &nbsp&nbsp📖 <a href="https://cloud.infini-ai.com/assets/png/wechat_official_account.1f7e61401726745659605.png">WeChat Official</a>&nbsp&nbsp
 </p>
 
+## Introduction
+Megrez-3B-Instruct is a large language model independently trained by Infinigence AI. Designed through an integrated approach to software and hardware optimization, Megrez-3B aims to provide ultra-fast inference, compact yet powerful performance, and highly accessible edge-side intelligent solutions. The model offers several key advantages:
 
-## Table of Contents
-- [Introduction](#leaderboard)
-- [News and Updates](#news-and-updates)
-- [Quick Start](#quick-start)
-- [Performance](#performance)
-- [Limitations](#limitations)
-- [License](#license)
-- [Citation](#citation)
-- [Contact](#contact)
+- **High Accuracy**: Despite its relatively small size of 3 billion parameters, Megrez-3B significantly narrows the performance gap through substantial improvements in data quality. It effectively compresses the capabilities of a previous 14-billion parameter model into a 3-billion parameter framework, achieving exceptional performance on mainstream benchmarks.
+- **High Speed**: A smaller model does not inherently guarantee faster speeds. Megrez-3B leverages software and hardware co-optimization to ensure high compatibility with mainstream hardware, delivering a 300% improvement in inference speed compared to models of equivalent accuracy.
+- **Ease of Use**: During the model's development, we deliberated on whether to prioritize structural designs that would allow for enhanced software and hardware collaboration (e.g., through ReLU activation, sparsity, and more streamlined architectures) or to maintain a classical structure for ease of use. We opted for the latter, implementing the traditional LLaMA2 architecture. This decision allows developers to deploy the model across various platforms without modification, thereby reducing the complexity of further development.
+- **Versatile Applications**: Based on Megrez-3B-Instruct, we provide a comprehensive WebSearch solution. In comparison to search_with_lepton, we have conducted targeted training on the model, enabling it to automatically determine when to call the search function and provide superior summarization results. Users can build their own Kimi or Perplexity based on this feature, overcoming common issues of hallucinations and knowledge-reserve limitations of smaller models.
 
 
 <a name="news-and-updates"></a>
