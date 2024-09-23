@@ -1,4 +1,4 @@
-# Infini-Megrez: Open Source LLM Family Developed By Infinigence-AI
+# Megrez-3B: The integration of software and hardware unleashes the potential of edge intelligence
 
 <p align="center">
     <img src="assets/megrez_logo.png" width="400"/>
@@ -9,12 +9,12 @@
 </p>
 
 ## Introduction
-Megrez-3B-Instruct is a large language model independently trained by Infinigence AI. Designed through an integrated approach to software and hardware optimization, Megrez-3B aims to provide ultra-fast inference, compact yet powerful performance, and highly accessible edge-side intelligent solutions. The model offers several key advantages:
+Megrez-3B is a large language model trained by [Infinigence AI](https://cloud.infini-ai.com/platform/ai). Megrez-3B aims to provide a fast inference, compact, and powerful edge-side intelligent solution through software-hardware co-design. Megrez-3B has the following advantages:
 
-- **High Accuracy**: Despite its relatively small size of 3 billion parameters, Megrez-3B significantly narrows the performance gap through substantial improvements in data quality. It effectively compresses the capabilities of a previous 14-billion parameter model into a 3-billion parameter framework, achieving exceptional performance on mainstream benchmarks.
-- **High Speed**: A smaller model does not inherently guarantee faster speeds. Megrez-3B leverages software and hardware co-optimization to ensure high compatibility with mainstream hardware, delivering a 300% improvement in inference speed compared to models of equivalent accuracy.
-- **Ease of Use**: During the model's development, we deliberated on whether to prioritize structural designs that would allow for enhanced software and hardware collaboration (e.g., through ReLU activation, sparsity, and more streamlined architectures) or to maintain a classical structure for ease of use. We opted for the latter, implementing the traditional LLaMA2 architecture. This decision allows developers to deploy the model across various platforms without modification, thereby reducing the complexity of further development.
-- **Versatile Applications**: Based on Megrez-3B-Instruct, we provide a comprehensive WebSearch solution. In comparison to search_with_lepton, we have conducted targeted training on the model, enabling it to automatically determine when to call the search function and provide superior summarization results. Users can build their own Kimi or Perplexity based on this feature, overcoming common issues of hallucinations and knowledge-reserve limitations of smaller models.
+- High Accuracy: Megrez-3B successfully compresses the capabilities of the previous 14 billion model into a 3 billion size, and achieves excellent performance on mainstream benchmarks.
+- High Speed: A smaller model does not necessarily bring faster speed. Megrez-3B ensures a high degree of compatibility with mainstream hardware through software-hardware co-design, leading an inference speedup up to 300% compared to previous models of the same accuracy.
+- Easy to Use: In the beginning, we had a debate about model design: should we design a unique but efficient model structure, or use a classic structure for ease of use? We chose the latter and adopt the most primitive LLaMA structure, which allows developers to deploy the model on various platforms without any modifications and minimize the complexity of future development.
+- Rich Applications: We have provided a full stack WebSearch solution. Our model is functionally trained on web search tasks, enabling it to automatically determine the timing of search invocations and provide better summarization results. The complete deployment code is released on [github](https://github.com/infinigence/InfiniWebSearch). 
 
 
 <a name="news-and-updates"></a>
