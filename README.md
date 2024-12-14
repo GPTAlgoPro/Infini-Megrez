@@ -5,7 +5,7 @@
 <p>
 
 <p align="center">
-        🤗 <a href="https://huggingface.co/Infinigence/Megrez-3B-Instruct">HuggingFace</a>&nbsp&nbsp | &nbsp&nbsp🤖 <a href="https://www.modelscope.cn/models/InfiniAI/Megrez-3b-Instruct">ModelScope</a>&nbsp&nbsp | &nbsp&nbsp🧙 <a href="https://modelers.cn/models/INFINIGENCE-AI/Megrez-3B-Instruct">Modelers</a>&nbsp&nbsp <br> &nbsp&nbsp🏠 <a href="https://cloud.infini-ai.com/genstudio/model/mo-c73owqiotql7lozr">Infini-AI mass</a>&nbsp&nbsp | &nbsp&nbsp🖥️ <a href="https://huggingface.co/spaces/Infinigence/Infinigence-AI-Chat-Demo">HF Demo</a>&nbsp&nbsp |  &nbsp&nbsp📖 <a href="https://cloud.infini-ai.com/assets/png/wechat_official_account.1f7e61401727063822266.png">WeChat Official</a>&nbsp&nbsp | &nbsp&nbsp💬 <a href="https://cloud.infini-ai.com/assets/png/wechat_community.7dbbc0b51727063822266.png">WeChat Groups</a>&nbsp&nbsp   
+        🤗 <a href="https://huggingface.co/Infinigence/Megrez-3B-Instruct">HuggingFace</a>&nbsp&nbsp | &nbsp&nbsp🤖 <a href="https://www.modelscope.cn/models/InfiniAI/Megrez-3b-Instruct">ModelScope</a>&nbsp&nbsp | &nbsp&nbsp🧙 <a href="https://modelers.cn/models/INFINIGENCE-AI/Megrez-3B-Instruct">Modelers</a>&nbsp&nbsp <br> &nbsp&nbsp🏠 <a href="https://cloud.infini-ai.com/genstudio/model/mo-c73owqiotql7lozr">Infini-AI mass</a>&nbsp&nbsp | &nbsp&nbsp📖 <a href="https://cloud.infini-ai.com/assets/png/wechat_official_account.1f7e61401727063822266.png">WeChat Official</a>&nbsp&nbsp | &nbsp&nbsp💬 <a href="https://cloud.infini-ai.com/assets/png/wechat_community.7dbbc0b51727063822266.png">WeChat Groups</a>&nbsp&nbsp   
 </p>
 
 ## Introduction
@@ -19,7 +19,7 @@ Megrez-3B is a large language model trained by [Infinigence AI](https://cloud.in
 
 <a name="news-and-updates"></a>
 ## News and Updates
-- 2024.09.24: We released the Megrez-3B-Instruct.
+- 2024.12.16: We released the Megrez-3B-Instruct.
 
 
 <a name="quick-start"></a>
@@ -51,7 +51,7 @@ model_outputs = model.generate(
     do_sample = True,
     max_new_tokens=2048,
     top_p=0.9,
-    temperature=0.7
+    temperature=0.2
 )
 
 output_token_ids = [
@@ -78,7 +78,7 @@ model_outputs = model.generate(
     do_sample = True,
     max_new_tokens=2048,
     top_p=0.9,
-    temperature=0.7
+    temperature=0.2
 )
 
 output_token_ids = [
@@ -103,7 +103,7 @@ llm = LLM(
 
 messages = [{"role": "user", "content": "How to make braised chicken in brown sauce?"}]
 input_text = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
-sampling_params = SamplingParams(top_p=0.9, temperature=0.7, max_tokens=2048, repetition_penalty=1.02)
+sampling_params = SamplingParams(top_p=0.9, temperature=0.2, max_tokens=2048)
 outputs = llm.generate(prompts=input_text, sampling_params=sampling_params)
 
 print(outputs[0].outputs[0].text)
@@ -135,7 +135,7 @@ The inference speeds reported here were all obtained using [vllm](https://github
 ### Model Card
 | Model Name |    Architecture   | Context length | # Total Params | # Non-Emb Params | Vocab Size | Training data | Supported languages |
 |:------:|:--------------: | :------------: | :------------: | :----------------------------------------: | :--------: | :-----------: | :-----------------: |
-| Megrez-3B-Instruct | Llama-2 with GQA |   4K tokens    |     2.92B      |                   2.29B                    |   122880   |   2T tokens   |  Chinese & English  |
+| Megrez-3B-Instruct | Llama-2 with GQA |   32K tokens    |     2.92B      |                   2.29B                    |   122880   |   3T tokens   |  Chinese & English  |
 
 ### General Benchmark
 |        Model Name         | Chat Model | # Non-Emb Params (B) | Inference Speed (tokens/s) | C-EVAL | CMMLU | MMLU  | MMLU-Pro | HumanEval | MBPP  | GSM8K | MATH  |
