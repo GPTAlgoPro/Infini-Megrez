@@ -1,10 +1,3 @@
----
-license: apache-2.0
-language:
-- en
-- zh
-pipeline_tag: text-generation
----
 # Megrez-3B-Instruct
 <p align="center">
     <img src="../assets/megrez_logo.png" width="400"/>

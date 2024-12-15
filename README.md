@@ -1,6 +1,3 @@
----
-license: apache-2.0
----
 # Megrez-3B: 软硬协同释放无穹端侧智能
 <p align="center">
     <img src="assets/megrez_logo.png" width="400"/>
