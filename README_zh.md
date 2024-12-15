@@ -14,6 +14,8 @@ license: apache-2.0
     <p>
 </h4>
 
+上面的地址麻烦改成hf 多模 + hf 单模 + 两个微信吧，其余的可以删（现在hf默认指向单模，不太好）？？？？
+
 # 目录
 
 - [模型下载](#模型下载)
@@ -44,6 +46,12 @@ license: apache-2.0
 
 # 模型下载
 
+咱们还有modelers的，
+
+https://modelers.cn/models/INFINIGENCE-AI/Megrez-3B-Omni
+https://modelers.cn/models/INFINIGENCE-AI/Megrez-3B-Instruct
+
+
 | HuggingFace                                                  | ModelScope                  |
 | :----------------------------------------------------------- | --------------------------- |
 | [Megrez-3B-Instruct](https://huggingface.co/Infinigence/Megrez-3B-Instruct) | [Megrez-3B-Instruct]()      |
@@ -51,6 +59,8 @@ license: apache-2.0
 
 
 # Megrez-3B
+
+下面这个我来改
 
 Megrez-3B-Instruct是由无问芯穹（[Infinigence AI](https://cloud.infini-ai.com/platform/ai)）完全自主训练的大语言模型。Megrez-3B旨在通过软硬协同理念，打造一款极速推理、小巧精悍、极易上手的端侧智能解决方案。Megrez-3B具有以下优点：
 
