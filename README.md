@@ -139,8 +139,9 @@ Megrez-3B-Instruct是由无问芯穹（[Infinigence AI](https://cloud.infini-ai.
 - 丰富应用：我们提供了完整的WebSearch方案。我们对模型进行了针对性训练，使模型可以自动决策搜索调用时机，在搜索和对话中自动切换，并提供更好的总结效果。我们提供了完整的部署工程代码 [github](https://github.com/infinigence/InfiniWebSearch)，用户可以基于该功能构建属于自己的Kimi或Perplexity，克服小模型常见的幻觉问题和知识储备不足的局限。
 
 速度精度模型大小散点图如下，位置越靠近右上表明模型越好越快。更多指标数据请见 🤗 [Megrez-3B-Instruct](https://huggingface.co/Infinigence/Megrez-3B-Instruct)
-![MMLU](../assets/mmlu.jpg)
-![MTBench](../assets/mtbench.jpg)
+
+![MMLU](assets/mmlu.jpg)
+![MTBench](assets/mtbench.jpg)
 
 具体模型能力结果和部署代码参考 [Infini-Megrez](https://github.com/infinigence/Infini-Megrez/blob/main/megrez/README.md)
 
