@@ -1,4 +1,4 @@
-# Megrez-3B: 软硬协同释放无穹端侧智能
+<h1 align="center">Megrez-3B: 软硬协同释放无穹端侧智能</h1>
 <p align="center">
     <img src="assets/megrez_logo.png" width="400"/>
 <p>
@@ -7,7 +7,7 @@
 </p>
 <h4 align="center">
     <p>
-        <b>中文</b> | <a href="https://github.com/infinigence/Infini-Megrez/blob/main/README_en.md">English</a>
+        <b>中文</b> | <a href="https://github.com/infinigence/Infini-Megrez/blob/main/README_EN.md">English</a>
     <p>
 </h4>
 
@@ -17,8 +17,6 @@
 - [Megrez-3B-Omni](#megrez-3b-omni)
   - [评测结果](#评测结果)
     - [图片理解能力](#图片理解能力)
-    - [文本处理能力](#文本处理能力)
-    - [语音理解能力](#语音理解能力)
     - [速度](#速度)
   - [快速上手](#快速上手)
     - [在线体验](#在线体验)
@@ -43,25 +41,21 @@ Megrez-3B-Omni是由无问芯穹（[Infinigence AI](https://cloud.infini-ai.com/
 ## 评测结果
 ### 图片理解能力
 
-左图为Megrez-3B-Omni与其他开源模型在图片理解各任务的能力比较；  
-右图为Megrez-3B-Omni在opencompass测试集上表现，参考 [InternVL 2.5 Blog Post](https://internvl.github.io/blog/2024-12-05-InternVL-2.5/)*
+- 上图为Megrez-3B-Omni与其他开源模型在图片理解各任务的能力比较；  
+- 下图为Megrez-3B-Omni在opencompass测试集上表现，参考 [InternVL 2.5 Blog Post](https://internvl.github.io/blog/2024-12-05-InternVL-2.5/)*
 
- <div style="display: flex; justify-content: space-between;">
-  <img src="assets/multitask.jpg" alt="Image 1" style="width: 45%;">
-  <img src="assets/opencompass.jpg" alt="Image 2" style="width: 45%;">
-</div>
 
-<!-- ![Multitask](assets/multitask.jpg)
+![Multitask](assets/multitask.jpg)
 
-![OpencompassBmk](assets/opencompass.jpg) -->
+![OpencompassBmk](assets/opencompass.jpg)
 
-更多指标数据请见 HF xxx
+更多指标数据请见 🤗 [Megrez-3B-Omni](https://huggingface.co/Infinigence/Megrez-3B-Omni)
 
 ### 速度
 
 |                | image_tokens | prefill (tokens/s) | decode (tokens/s) |
 |:--------------:|:------------:|:------------------:|:-----------------:|
-| Megrez-3B-Omni |      448     |       6312.66      |       1294.9      |
+| Megrez-3B-Omni |      448     |       6312.66      |       **1294.9**      |
 | Qwen2-VL-2B    |     1378     |       7349.39      |       685.66      |
 | MiniCPM-V-2_6  |      448     |       2167.09      |       452.51      |
 
