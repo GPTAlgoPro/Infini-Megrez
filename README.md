@@ -153,7 +153,8 @@ Megrez-3B-Instruct是由无问芯穹（[Infinigence AI](https://cloud.infini-ai.
 4. 一个模型两种用法：通过sys prompt区分WebSearch功能开启与否，兼顾LLM的高精度与WebSearch的用户体验，两种能力不乱窜
 
 我们对模型进行了针对性训练，使模型可以自动决策搜索调用时机，在搜索和对话中自动切换，并提供更好的总结效果。我们提供了完整的部署工程代码 ，用户可以基于该功能构建属于自己的Kimi或Perplexity，克服小模型常见的幻觉问题和知识储备不足的局限。
-![WebSearchDemo](../assets/websearch_demo.gif)
+
+![WebSearchDemo](assets/websearch_demo.gif)
 
 # 开源协议及使用声明
 - 协议：本仓库中代码依照 [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0) 协议开源。
