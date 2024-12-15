@@ -36,13 +36,11 @@ license: apache-2.0
     - [文本处理能力](#文本处理能力)
     - [语音理解能力](#语音理解能力)
     - [速度](#速度)
-  - [模型推理](#模型推理)
-    - [HuggingFace](#huggingface)
-    - [ModelScope](#modelscope)
-    - [vLLM](#vllm)
-  - [进阶功能](#进阶功能)
-    - [Websearch](#websearch)
-    - [终端推理](#终端推理)
+  - [快速上手](#快速上手)
+    - [在线体验](#在线体验)
+    - [本地部署](#本地部署)
+    - [注意事项](#注意事项)
+  - [开源协议及使用声明](#开源协议及使用声明)
 
 # 模型下载
 
@@ -347,9 +345,6 @@ Megrez-3B-Omni是由无问芯穹（[Infinigence AI](https://cloud.infini-ai.com/
 ### 在线体验
 
 [HF Chat Demo](https://huggingface.co/spaces/Infinigence/Infinigence-AI-Chat-Demo)
-
-### 推理参数
-??????
 
 ### 本地部署
 
