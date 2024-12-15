@@ -148,7 +148,23 @@ Megrez-3B is a large language model trained by Infinigence AI. Megrez-3B aims to
 - Easy to Use: In the beginning, we had a debate about model design: should we design a unique but efficient model structure, or use a classic structure for ease of use? We chose the latter and adopt the most primitive LLaMA structure, which allows developers to deploy the model on various platforms without any modifications and minimize the complexity of future development.
 - Rich Applications: We have provided a full stack WebSearch solution. Our model is functionally trained on web search tasks, enabling it to automatically determine the timing of search invocations and provide better summarization results. The complete deployment code is released on [github](https://github.com/infinigence/InfiniWebSearch).
 
+The scatter plot of speed, accuracy and model size is roughly as follows. The point size represents the number of model parameters. For more metric data, please refer to 🤗 [Megrez-3B-Instruct](https://huggingface.co/Infinigence/Megrez-3B-Instruct/blob/main/README_EN.md)
+
+![MMLU](assets/mmlu_en.png)
+![MTBench](assets/chat_en.png)
+
 The specific model capabilities and deployment code can be referenced. [Infini-Megrez](https://github.com/infinigence/Infini-Megrez/blob/main/megrez/README_EN.md)
+
+## WebSearch
+We have provided a fullstack WebSearch solution which has the following advantages:
+1. Automatically determine the timing of search invocations: Switch between search and conversation automatically without tendency.
+2. In-Context understanding: Generate reasonable search queries or process search results based on multi-turn conversations.
+3. Structured output: Each conclusion is attributed to its source for easy verification.
+4. One model with two usages: Enable the WebSearch ability by changing system prompt. Or you can use it as a classic LLM.
+
+Our model is functionally trained on web search tasks. Users can build their own Kimi or Perplexity based on this feature, which overcomes the hallucination issues and gets update knowledge.
+
+![WebSearchDemo](assets/websearch_demo.gif)
 
 
 ## Open Source License and Usage Statement
