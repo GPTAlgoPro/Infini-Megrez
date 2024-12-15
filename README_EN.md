@@ -204,7 +204,7 @@ Megrez-3B is a large language model trained by Infinigence AI. Megrez-3B aims to
 - Easy to Use: In the beginning, we had a debate about model design: should we design a unique but efficient model structure, or use a classic structure for ease of use? We chose the latter and adopt the most primitive LLaMA structure, which allows developers to deploy the model on various platforms without any modifications and minimize the complexity of future development.
 - Rich Applications: We have provided a full stack WebSearch solution. Our model is functionally trained on web search tasks, enabling it to automatically determine the timing of search invocations and provide better summarization results. The complete deployment code is released on [github](https://github.com/infinigence/InfiniWebSearch).
 
-The specific model capabilities and deployment code can be referenced. [Infini-Megrez](https://github.com/infinigence/Infini-Megrez/megrez/README_EN.md)
+The specific model capabilities and deployment code can be referenced. [Infini-Megrez](https://github.com/infinigence/Infini-Megrez/blob/main/megrez/README_EN.md)
 
 
 ## Open Source License and Usage Statement

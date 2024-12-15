@@ -8,7 +8,7 @@
 </p>
 <h4 align="center">
     <p>
-        <b>中文</b> | <a href="https://github.com/infinigence/Infini-Megrez/megrez/README_EN.md">English</a>
+        <b>中文</b> | <a href="https://github.com/infinigence/Infini-Megrez/blob/main/megrez/README_EN.md">English</a>
     <p>
 </h4>
 

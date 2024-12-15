@@ -11,7 +11,7 @@
 </p>
 <h4 align="center">
     <p>
-        <a href="https://github.com/infinigence/Infini-Megrez/megrez/README.md">中文</a> | <b>English</b>
+        <a href="https://github.com/infinigence/Infini-Megrez/blob/main/megrez/README.md">中文</a> | <b>English</b>
     <p>
 </h4>
 

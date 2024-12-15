@@ -198,7 +198,7 @@ Megrez-3B-Instruct是由无问芯穹（[Infinigence AI](https://cloud.infini-ai.
 - 简单易用：模型设计之初我们进行了激烈的讨论：应该在结构设计上留出更多软硬协同的空间（如ReLU、稀疏化、更精简的结构等），还是使用经典结构便于开发者直接用起来？我们选择了后者，即采用最原始的LLaMA结构，开发者无需任何修改便可将模型部署于各种平台，最小化二次开发复杂度。
 - 丰富应用：我们提供了完整的WebSearch方案。我们对模型进行了针对性训练，使模型可以自动决策搜索调用时机，在搜索和对话中自动切换，并提供更好的总结效果。我们提供了完整的部署工程代码 [github](https://github.com/infinigence/InfiniWebSearch)，用户可以基于该功能构建属于自己的Kimi或Perplexity，克服小模型常见的幻觉问题和知识储备不足的局限。
 
-具体模型能力结果和部署代码参考 [Infini-Megrez](https://github.com/infinigence/Infini-Megrez/megrez/README.md)
+具体模型能力结果和部署代码参考 [Infini-Megrez](https://github.com/infinigence/Infini-Megrez/blob/main/megrez/README.md)
 
 # 开源协议及使用声明
 - 协议：本仓库中代码依照 [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0) 协议开源。
