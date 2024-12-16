@@ -42,7 +42,7 @@ Megrez-3B-Omni是由无问芯穹（[Infinigence AI](https://cloud.infini-ai.com/
 ### 图片理解能力
 
 - 上图为Megrez-3B-Omni与其他开源模型在图片理解各任务的能力比较；  
-- 下图为Megrez-3B-Omni在opencompass测试集上表现，参考 [InternVL 2.5 Blog Post](https://internvl.github.io/blog/2024-12-05-InternVL-2.5/)*
+- 下图为Megrez-3B-Omni在opencompass测试集上表现，参考 [InternVL 2.5 Blog Post](https://internvl.github.io/blog/2024-12-05-InternVL-2.5/)
 
 
 ![Multitask](assets/multitask.jpg)
