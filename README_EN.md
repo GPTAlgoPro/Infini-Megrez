@@ -24,6 +24,7 @@
     - [Local Deployment](#local-deployment)
     - [Notes](#notes)
 - [Megrez-3B](#megrez-3b)
+  - [WebSearch](#websearch)
 - [Open Source License and Usage Statement](#open-source-license-and-usage-statement)
 
 # Model Downloads
