@@ -12,7 +12,7 @@
     <p>
 </h4>
 
-# 目录
+# Quick Links
 
 - [Model Downloads](#model-downloads)
 - [Megrez-3B-Omni](#megrez-3b-omni)
