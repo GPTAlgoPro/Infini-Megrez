@@ -60,7 +60,7 @@ For more metric data, please refer to 🤗 [Megrez-3B-Instruct](https://huggingf
 | Baichuan2-13B-Base    |      756.7         |
 | Qwen1.5-14B           |      735.6         |
 
-- 测速配置详见 <a href="https://huggingface.co/Infinigence/Megrez-3B-Instruct/blob/main/README_SPEED.md">README_SPEED.md</a>
+- For details on the configuration for measuring speed, please refer to <a href="https://huggingface.co/Infinigence/Megrez-3B-Instruct/blob/main/README_SPEED.md">README_SPEED.md</a>
 
 ## WebSearch
 We have provided a fullstack WebSearch solution which has the following advantages:
